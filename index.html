@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ramadhankukuh - MagicWhell</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+  </style>
+</head>
+<body>
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/images/gusion.jpeg" alt="Gusion" width="1100" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/images/alucard.jpeg" alt="Alucard" width="1100" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/images/saber.jpeg" alt="Saber" width="1100" height="500">
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+</body>
+</html>
+<style>
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<h1>KALKULATOR MAGIC WHELL</h1>
+
+<div class="slidecontainer">
+ <span><font color='black'>Magic Point Kamu: </font></span> <span id="f" style="font-weight:bold;color:#1a1aff"></span><br/>
+ 						 <input type="range" min="0" max="199" value="100" name="sld6" class="slider" id="myRange" onchange="show_value2(this.value)">
+ 						 <font color='black'>Maksimal Butuh: </font><span id="slider_value2" style="color:#1a1aff;font-weight:bold;"></span>
+
+                         <img style="margin-right: 3px !important;" height="20px" src="diamond.png"/><br>    		
+
+<script>
+function show_value2(x)
+{
+
+ if(x<191){    
+ sisa_spin = 200-x;
+ jumlah_spin = Math.ceil(sisa_spin/5);
+yz = jumlah_spin*270; }
+
+if(x>190){ 
+
+sisa_spin = 200-x;
+yz = sisa_spin*60;
+    
+}
+ 
+
+ document.getElementById("slider_value2").innerHTML=yz;
+ 
+}
+</script>
+
+
+ 
+<script>
+var slideCol = document.getElementById("myRange");
+var y = document.getElementById("f");
+y.innerHTML = slideCol.value;
+
+slideCol.oninput = function() {
+    y.innerHTML = this.value;
+}
+ 
+</script>
+ 
+ 
+</div>
+<br/>
+</body>
+</html>
